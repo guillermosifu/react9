@@ -4,11 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import PrimerComponente from './AppEjemplo';
+import Form from './componentes/Form';
 
  const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <PrimerComponente/>    
+   <Form/>
+        
   </React.StrictMode>
 );
 
