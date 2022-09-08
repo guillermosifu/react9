@@ -7,11 +7,12 @@ import PrimerComponente from './AppEjemplo';
 import Form from './componentes/Form';
 import FormRegister from './FormRegister';
 import FormUsuario from './FormUser';
+import Git from './PracticaGit'
 
  const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-   <FormUsuario/>
+  <React.StrictMode>  
+   <Git/>
   
         
   </React.StrictMode>

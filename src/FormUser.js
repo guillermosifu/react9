@@ -1,4 +1,5 @@
 import { useState } from "react"
+import{TextField} from "@mui/material";
 
 const FormUsuario =()=>{
 // la otra forma en la cual podemos guaradar datod de un input
@@ -42,7 +43,7 @@ const handleInputValues =(e)=>{
                 <h5>correo</h5>
                 <h5>password</h5>
                 <p>
-                    <input type="text" name="nombre" placeholder="ingresa tu nombre " onChange={handleInputValues}/>
+                    <TextField type="text" name="nombre" placeholder="ingresa tu nombre " onChange={handleInputValues}/>
                 </p>
                 <p>
                     <input type="text" name="apellido" placeholder="ingresa tu Apellido "onChange={handleInputValues} />
