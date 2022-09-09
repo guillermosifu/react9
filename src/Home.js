@@ -40,12 +40,15 @@ return(
     {pokemons.map((pokemon, index)=>(
         //aca el codigo visual 
         <Grid item md ={4} sm ={12} xs={12}>
-            <Card>
-                <CardMedia component ="img" className="img-pokemon" image={`${imgUrl}${index +1}.svg`}>
+            <Card className="card-pokemon">
+                <CardMedia component ="img" className="img-pokemon" image={`${imgUrl}${index +1}.svg`}/>
+                <CardContent className="center">
+                    <h3 className="name-pokemon">{pokemon.name}</h3>
 
+                </CardContent>       
                     
 
-                </CardMedia>
+               
             </Card>
         </Grid>
     ))}
