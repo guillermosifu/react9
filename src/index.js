@@ -4,18 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import PrimerComponente from './AppEjemplo';
-import Form from './componentes/Form';
 import FormRegister from './FormRegister';
-import FormUsuario from './FormUser';
-import Git from './PracticaGit'
-import Home from './Home';
+
+
+
+
 
  const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>  
-  
-   <Home/>  
-        
+  <React.StrictMode>    
+  <App/>      
   </React.StrictMode>
 );
 

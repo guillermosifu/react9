@@ -41,7 +41,7 @@ const handleOpenDialog = async()=>{
                     <Chip
                       label={abilitie.ability.name}
                       color="primary"
-                      sx={{ marginRight: 2 }}
+                      sx={{ marginBottom: 2 }}
                     />
                   ))}
                   <h4>DAtos</h4>
@@ -49,6 +49,12 @@ const handleOpenDialog = async()=>{
                     <Chip
                     label={type.type.name}/>
                   ))}
+                  <Chip
+                  label={`${pokemonData.height /10}m `}
+                  color ="success"/>
+                   <Chip
+                  label={`${pokemonData.weight /10}k `}
+                  color ="success"/>
                   <Grid item>
                     <img width={300} src={pokemonData.sprites.other["official-artwork"].front_default} />
                   </Grid>

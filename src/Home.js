@@ -36,6 +36,7 @@ useEffect(()=>{
 return(
 <Container>
     <h1>Pokedex</h1>
+    
    <Grid container spacing ={3}>
 
     {pokemons.map((pokemon, index)=>(
@@ -45,10 +46,8 @@ return(
                 <CardMedia component ="img" className="img-pokemon" image={`${imgUrl}${index +1}.svg`}/>
                 <CardContent className="center">
                     <h3 className="name-pokemon">{pokemon.name}</h3>
-                    <PokemonDetail pepito={pokemon.name} url ={pokemon.url}/>
-
-                </CardContent>       
-                    
+                    <PokemonDetail pepito={pokemon.name} url={pokemon.url}/>
+                </CardContent>                    
 
                
             </Card>
