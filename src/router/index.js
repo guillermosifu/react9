@@ -3,6 +3,7 @@ import Home from "../Home"
 import Form from "../../src/componentes/Form"
 import Git from "../PracticaGit"
 import FormUsuario from "../FormUser"
+import Flags from "../Flags"
 
 //nuestro router va a ser un componente el cual se encargue de retornar las rutas de su respectvia vista 
 
@@ -11,8 +12,14 @@ const Router =()=>{
     return(
         <BrowserRouter>        
         <Routes>
+            {/* publicas */}
             <Route path="/" element={<Home/>}/>
-            <Route path="form" element={<Form/>} />
+            <Route path="/formulario" element={<Form/>} />
+            <Route path="git" element={<Git/>} />
+            <Route path="banderas" element={<Flags/>} />
+            {/* privadas */}
+
+
         </Routes>      
         
         
