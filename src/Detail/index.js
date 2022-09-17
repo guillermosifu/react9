@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams,useNavigate } from "react-router-dom";
 import { useState,useEffect } from "react";
 import{Container,Grid,Chip, Button} from "@mui/material"
 import { getDataFromPokemon } from "../services";
@@ -8,8 +8,9 @@ import { getDataFromPokemon } from "../services";
 const Detail =()=>{
     
     const {name} = useParams();
-
-
+     
+    const history = useNavigate();
+    
     const [country,setCountry] = useState({});
 
     const fetchCountry = async()=>{
@@ -29,6 +30,8 @@ const Detail =()=>{
 return (
 
 <Container>
+<Button variant="contained" onClick={()=> history(-1)}> BACK</Button>
+
     {Object.keys(country).length > 0 && (
         <Grid 
         container
@@ -38,7 +41,7 @@ return (
                 <img src={country.flags.svg} width={400} alt=""/>
             </Grid>
             <Grid item md={6}>
-                <p><b>Nombre Nativo</b>: {country.name?.official}</p>
+                <p><b>Nombre Nativo</b>: {country.name?.common}</p>
                 <p><b>Poblacion</b>: {country.population}</p>
                 <p><b>Region</b>: {country.region}</p>
                 <p><b>Sub Region</b>: {country.subregion}</p>

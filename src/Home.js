@@ -1,7 +1,7 @@
-import {Container ,Grid,Card,CardMedia,CardContent} from "@mui/material"
+import {Container ,Grid,Card,CardMedia,CardContent,Button} from "@mui/material"
 import { getDataFromPokemon } from "./services";
 import {useEffect, useState} from "react"
-
+import {Link} from "react-router-dom"
 import PokemonDetail from "./pokemonDetail"
 
 const Home =()=>{
@@ -46,6 +46,8 @@ return(
                 <CardMedia component ="img" className="img-pokemon" image={`${imgUrl}${index +1}.svg`}/>
                 <CardContent className="center">
                     <h3 className="name-pokemon">{pokemon.name}</h3>
+                   <Link to ="/banderas"> <Button variant="contained">banderas</Button></Link>
+                   <Link to ="/git"> <Button variant="contained">GIT</Button></Link>
                     <PokemonDetail pepito={pokemon.name} url={pokemon.url}/>
                 </CardContent>                    
 
