@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import { useEffect, useState } from "react";
 import { getDataFromPokemon } from "../services";
+import {Link} from "react-router-dom"
 
 const Flags = () => {
     const [countries, setCountries] = useState([]);
@@ -95,21 +96,21 @@ const Flags = () => {
           {countries.length > 0 ? (
             countries.map((country) => (
               <Grid item md={3} xs={12}>
-                
+                <Link to ={`/banderas/detail/${country.name.common}`}>
                   <Card>
                     <CardMedia
                       component="img"
                       height={200}
                       image={country.flags.svg}
                     />
-                    <CardContent>
+                    <CardContent>   
                       <h4>{country.name.common}</h4>
                       <p>Population: {country.population}</p>
                       <p>Region: {country.region}</p>
                       <p>Capital: {country.capital}</p>
                     </CardContent>
                   </Card>
-              
+                  </Link>
               </Grid>
             ))
           ) : (
