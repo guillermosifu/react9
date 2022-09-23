@@ -6,6 +6,17 @@ const Login = () => {
 
 const {user,setUser} = useContext(UserContext);
 
+const handleClick =()=>{
+    setUser({
+        //cambiare el valor ASIGNADO
+        name: "jean",
+        last_name:"montes",
+    })
+};
+
+
+
+
   return (
     <Grid container alignItems="center" justifyContent="space-around" sx={{height:"100vh",padding:20,backgroundColor:"#FFD885"}}>
       <Grid item md={6}>
@@ -28,7 +39,7 @@ const {user,setUser} = useContext(UserContext);
               <TextField label="Password" fullWidth name="password" />
             </Grid>
             <Grid item md={12} mt={3}>
-              <Button variant="contained" fullWidth size="large" sx={{backgroundColor:"#000"}}>
+              <Button variant="contained" fullWidth size="large" sx={{backgroundColor:"#000"}} onClick={handleClick}>
                 Inicia Sesion
               </Button>
             </Grid>

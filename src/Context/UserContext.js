@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 
 export const UserContext = createContext()
-
+// todo context neecesita un PROVIDER , sin esto no funcionaria
 export const UserProvider =(props)=>{
 const [user,setUser] = useState({
     name:"guillermo",
